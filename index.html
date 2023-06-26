@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootcamp Widgets</title>
+    <script src="bootcampjs\greet.js"></script>
+    <script src="widgetsjs\greet-widget.js" defer></script>
+    <script src="bootcampjs\enoughAirtime.js"></script>
+    <script src="widgetsjs/enoughAirtime-widget.js"></script>
+    <script src="bootcampjs/transportFee.js"></script>
+    <script src="widgetsjs/transportFee-widget.js"></script>
+    <script src="bootcampjs/totalPhoneBill.js"></script>
+    <script src="widgetsjs/totalPhoneBill-widget.js"></script>
+    <script src="bootcampjs/wordGame.js"></script>
+    <script src="widgetsjs/wordGame-widget.js"></script>
+
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div><h1>Alpinejs BootCamp Widgets</h1></div>
+
+    <div class="widgets">
+        <div class="widget" x-data="greetwidget">
+            <h3>Greet Widget</h3>
+            <div x-show="message.length > 0" class="message" x-text="message">
+            </div>
+            <div class="input">
+                <label for="name">Please Enter Your Name: </label>
+                <input type="text" placeholder="Name"  x-model="name" id="name">
+            </div>
+            <div class="cont"><button x-on:click="greetMe"><b>Greet Me</b></button></div>
+        </div>
+        
+        <div class="widget" x-data="enoughairtime">
+            <h3>Enough Airtime Widget</h3>
+    
+            <div x-show="airtimeMessage.length > 0" class="message" x-text="airtimeMessage">
+            </div>
+    
+            <div class="input">
+                <label for="usage">Please Enter Airtime Usage: </label>
+                <input type="text" placeholder="call,sms,data"  x-model="item" id="usage"> 
+            </div>
+            <div class="input">
+                <label for="amount">Amount Available:</label>
+                <input type="text" x-model="airtime" placeholder="R0.00" id="amount"> 
+            </div>
+            <div class="cont">
+                <button x-on:click="Calculate"><b>Calculate Airtime Usage</b></button>
+            </div>
+        </div>
+
+        <div class="widget" x-data="wordGameWidget">
+            <h3>Word Game Widget</h3>
+            <span>
+                <div x-show="longWord.length > 0" class="message" x-text="longWord">
+    
+                </div>
+                <div x-show="shortWord.length > 0" class="message" x-text="shortWord">
+    
+                </div>
+                <div x-show="wordLength.length > 0" class="message" x-text="wordLength">
+    
+                </div>
+            </span>
+            <div>
+                <label for="string"><b>Type Your Sentence: </b></label>
+                <input type="text" id="string" x-model="word">
+                <div class="cont"><button @click="mySentence"><b>Sort and Count</b></button></div>
+    
+            </div>
+        </div>
+    </div>
+    <div class="widgets">
+        <div class="widget" x-data="transportwidget">
+            <h3>Transport Fee Widget</h3>
+            <div x-show="shiftMessage.length > 0" class="message" x-text="shiftMessage">
+            </div>
+            <div class="input"><label for="shift">Please Enter Shift: </label>
+                <input type="text" placeholder="morning,afternoon,nightshift"  x-model="shift" id="shift">
+            </div>
+            <div class="cont"><button x-on:click="shiftprice"><b>Shift Price</b></button></div>
+        </div>
+
+        <div class="widget" x-data="totalphonewidget">
+            <h3>Total Phone Bill Widget</h3>
+            <div x-show="billMessage.length > 0" class="message" x-text="billMessage">
+            </div>
+            <div class="input">
+                <label for="bill">Please Enter Phone Usage String: </label>
+                <input type="text" placeholder="call,sms" x-model="bill" id="bill">
+            </div>
+            <div class="cont"><button x-on:click="phoneBill"><b>Calculate Bill</b></button></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

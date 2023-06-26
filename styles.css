@@ -1,0 +1,51 @@
+.message{
+    padding: 1em;
+    background-color: white;
+    margin-bottom: 1em;
+}
+.cont{
+    padding: 0.5em;
+    margin: 0.5em;
+    font-style: normal;
+    color: green;
+}
+.input > label{
+    display: inline-block;
+    width: 15em;
+    padding: 0.5em;
+    font-weight: bold;
+}
+.input > input[type="text"]{
+    padding: 0.5em;
+    margin: 0.5em;
+}
+.widget{
+    flex: 1;
+    border: 3px solid black;
+    margin: 1em;
+    padding: 1em;
+    border-radius: 0.5em;
+    text-align: center;
+}
+h1{
+    text-align: center;
+    margin: 1em 0 0.5em 0;
+	color: #343434;
+	font-weight: normal;
+	font-family: 'Ultra', sans-serif;   
+	font-size: 36px;
+	line-height: 42px;
+	text-transform: uppercase;
+	text-shadow: 0 2px white, 0 3px #777;
+}
+h3{
+    background-color: #6a4c93;
+}
+body{
+    background-color: #1982c4;
+}
+@media(min-width:768px){
+    .widgets{
+        display: flex;
+    }
+}
