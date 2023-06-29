@@ -1,4 +1,13 @@
 var greet = function(name){
-  return "Hello, " + name;
+  if(name.match(/^[A-Za-z]+$/)){
+    return "Hello, " + name;
+  }
+  else if(name.match(/^[0-9][A-Za-z]/)){
+    return "Name cannot start with number";
+  }
+  else if(!name){
+    return "Enter a valid name";
+  }
+  
 }
 console.log(greet("Xolani"));
