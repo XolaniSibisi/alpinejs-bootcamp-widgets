@@ -17,8 +17,11 @@ function enoughAirtime(projectedUsage, airtimeAvailable){
     }
     
   }
+  if(!airtimeAvailable.match(/[0-9]/)){
+    return "Amount cannot be a string";
+  }
   var airtimeLeft = airtimeAvailable-totalCost; 
-  if(airtimeLeft > 0){
+  if(airtimeLeft > 0 ){
     return "R"+(airtimeLeft).toFixed(2);
   }
   else{
