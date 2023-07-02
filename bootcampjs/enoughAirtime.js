@@ -27,7 +27,7 @@ function enoughAirtime(projectedUsage, airtimeAvailable){
   else{
       //cost = 0;
       //return "R"+cost.toFixed(2);
-    return "R0.00";
+    return "Airtime amount available is not enough for the specified string";
   }
 }
 console.log(enoughAirtime('data,sms,data,sms', 20));

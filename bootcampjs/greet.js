@@ -8,6 +8,9 @@ var greet = function(name){
   else if(!name){
     return "Enter a valid name";
   }
+  else if(name.match(/[0-9]*/)){
+    return 'Invalid name';
+  }
   
 }
 console.log(greet("Xolani"));
